@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Face</title>
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Parallax Background Elements -->
+        <div class="sky-gradient"></div>
+        <div id="clouds" class="clouds"></div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Elements -->
+        <div id="ui-layer">
+            <div id="score-hud">0</div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <h1 class="title">Flappy Face</h1>
+                <p class="subtitle">Click or Press Space to Start</p>
+                <p class="instructions">Add your 'player.png' and 'pillar.png' to the /assets folder</p>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen">
+                <img id="game-over-img" src="assets/pillar.png" alt="Laughing Meme">
+                <h2 class="game-over-title">Bot ga..</h2>
+
+                <div class="score-card">
+                    <p>SCORE</p>
+                    <h3 id="final-score">0</h3>
+                    <p>BEST</p>
+                    <h3 id="best-score">0</h3>
+                </div>
+
+                <button id="try-again-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Assets needed for canvas -->
+    <div style="display: none;">
+        <img id="img-player" src="assets/player.png" alt="Player Face">
+        <img id="img-pillar" src="assets/pillar.png" alt="Pillar Face">
+        <img id="img-bg" src="assets/background.png" alt="Custom Background">
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
